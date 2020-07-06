@@ -43,16 +43,92 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // ## Task 1: Create selectors to point your data into elements
 
-// * [ ] Create selectors by using any of the DOM element's methods
-// * [ ] Note that IDs have been used on all images. Use the IDs to update src path content
+// * [X] Create selectors by using any of the DOM element's methods
+// * [X] Note that IDs have been used on all images. Use the IDs to update src path content
 
+
+// NAV -- create variables for each link
+const link1 = document.querySelector('nav a:nth-child(1)')
+const link2 = document.querySelector('nav a:nth-child(2)')
+const link3 = document.querySelector('nav a:nth-child(3)')
+const link4 = document.querySelector('nav a:nth-child(4)')
+const link5 = document.querySelector('nav a:nth-child(5)')
+const link6 = document.querySelector('nav a:nth-child(6)')
+
+// CTA -- create variable for each part
+const heading = document.querySelector('.cta-text h1')
+const ctaBtn = document.querySelector('.cta-text button')
+const ctaImg = document.querySelector('#cta-img')
+
+
+// .MAIN-CONTENT .top-content
+const featuresH4 = document.querySelector('.top-content .text-content h4')
+const featuresP = document.querySelector('.top-content .text-content p')
+const aboutH4 = document.querySelector('.top-content .text-content:nth-child(2) h4')
+const aboutP = document.querySelector('.top-content .text-content:nth-child(2) p')
+
+// .MAIN-CONTENT middle image
+const middleImg = document.getElementById('middle-img')
+
+// .MAIN-CONTENT .bottom-content
+const servicesH4 = document.querySelector('.bottom-content .text-content h4')
+const servicesP = document.querySelector('.bottom-content .text-content p')
+const productH4 = document.querySelector('.bottom-content .text-content:nth-child(2) h4')
+const productP = document.querySelector('.bottom-content .text-content:nth-child(2) p')
+const visionH4 = document.querySelector('.bottom-content .text-content:nth-child(3) h4')
+const visionP = document.querySelector('.bottom-content .text-content:nth-child(3) p')
+
+
+// CONTACT
+const contactH4 = document.querySelector('.contact h4')
+const address = document.querySelector('.contact p')
+const phone = document.querySelector('.contact p:nth-child(3)') 
+const email = document.querySelector('.contact p:nth-child(4)')
+
+// FOOTER 
+const footerP = document.querySelector('footer p')
 
 
 // ## Task 2: Update the HTML with the JSON data
 
-// * [ ] Remember, NO direct updating of the HTML source is allowed.
-// * [ ] Using your selectors, update the content to match the example file.
-// * [ ] Remember to update the src attributes on images
+// * [X] Remember, NO direct updating of the HTML source is allowed.
+// * [X] Using your selectors, update the content to match the example file.
+// * [X] Remember to update the src attributes on images
+
+// NAV -- add text content to each link
+link1.textContent = siteContent.nav['nav-item-1']; 
+link2.textContent = siteContent.nav['nav-item-2']; 
+link3.textContent = siteContent.nav['nav-item-3']; 
+link4.textContent = siteContent.nav['nav-item-4']; 
+link5.textContent = siteContent.nav['nav-item-5']; 
+link6.textContent = siteContent.nav['nav-item-6']; 
+
+// CTA -- add correct content to each part
+heading.textContent = siteContent.cta['h1'];
+ctaBtn.textContent = siteContent.cta['button'];
+ctaImg.setAttribute('src', siteContent.cta['img-src']);
+
+// MAIN-CONTENT -- add correct content for each part
+featuresH4.textContent = siteContent['main-content']['features-h4']
+featuresP.textContent = siteContent['main-content']['features-content']
+aboutH4.textContent = siteContent['main-content']['about-h4']
+aboutP.textContent = siteContent['main-content']['about-content']
+
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+servicesH4.textContent = siteContent['main-content']['services-h4']
+servicesP.textContent = siteContent['main-content']['services-content']
+productH4.textContent = siteContent['main-content']['product-h4']
+productP.textContent = siteContent['main-content']['product-content']
+
+// CONTACT
+contactH4.textContent = siteContent.contact['contact-h4']
+address.textContent = siteContent.contact['address']
+phone.textContent = siteContent.contact['phone']
+email.textContent = siteContent.contact['email']
+
+// FOOTER 
+footerP.textContent = siteContent.footer['copyright']
 
 
 
