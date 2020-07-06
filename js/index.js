@@ -134,10 +134,35 @@ footerP.textContent = siteContent.footer['copyright']
 
 // ## Task 3: Add new content
 
-// * [ ] Change the color of the navigation text to be green.
-// * [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-// * [ ] Check your work by looking at the [original html](original.html) in the browser
+// * [X] Change the color of the navigation text to be green.
+// * [X] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+// * [X] Check your work by looking at the [original html](original.html) in the browser
 
+// Change the color of the navigation text to be green.
+const navLinks = document.querySelectorAll('nav a')
+navLinks.forEach(link => link.style.color = 'green')
+
+// Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+
+const newLink1 = document.createElement('a'); 
+const newLink2 = document.createElement('a');
+
+newLink1.href = '#'; 
+newLink1.textContent = 'Appended'
+
+newLink2.href = '#'; 
+newLink2.textContent = 'Prepended'
+
+let nav = document.querySelector('nav')
+
+nav.appendChild(newLink1); 
+nav.prepend(newLink2);
+
+// turning all links green 
+// -- new links aren't in navLinks (above)
+// -- need a new node list with updated a tags
+const newNavLinks = document.querySelectorAll('nav a')
+newNavLinks.forEach(link => link.style.color = 'green')
 
 
 // ## Stretch Goals
